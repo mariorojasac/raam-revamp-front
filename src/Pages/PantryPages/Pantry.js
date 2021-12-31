@@ -6,7 +6,7 @@ import React from 'react'
 
 const Pantry = (props) => {
     const [ pantries, setPantries ] = useState(null);
-
+    const PANTRY_BASE_URL = "https://raam-test-api-2.herokuapp.com";
     return (
         <div>
             
