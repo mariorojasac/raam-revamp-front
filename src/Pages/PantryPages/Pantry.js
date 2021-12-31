@@ -30,9 +30,16 @@ const Pantry = (props) => {
 
 
     return (
-        <div>
-            
-        </div>
+        <main>
+            <Switch>
+                <Route exact path="/">
+                    <Index pantries={pantries} createPantries={createPantries}/>
+                </Route>
+                <Route path="/pantry/:id" render={(rp) => (
+                    <Show {...rp} />
+                )} />
+            </Switch>
+        </main>
     )
 }
 
