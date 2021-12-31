@@ -6,8 +6,6 @@ import React from 'react'
 
 const PantryIndex = () => {
     const [newForm, setNewForm] = useState(getNewState());
-    const PANTRY_BASE_URL = "https://raam-test-api-2.herokuapp.com";
-
     function getNewState() {
         return {
             name: "",
