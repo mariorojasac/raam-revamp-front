@@ -4,7 +4,9 @@ import PantryIndex from './PantryIndex';
 
 import React from 'react'
 
-const Pantry = () => {
+const Pantry = (props) => {
+    const [ pantries, setPantries ] = useState(null);
+
     return (
         <div>
             
