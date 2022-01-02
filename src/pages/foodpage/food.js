@@ -1,8 +1,8 @@
 import { Route, Switch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import FoodIndex from '../foodpage/foodIndex';
-import FoodShow from '../foodpage/foodShow';
-
+import FoodIndex from './FoodIndex';
+import FoodShow from './FoodShow';
+Food
 
 const Food = (props) => {
     const [foods, setFoods] = useState(null);
