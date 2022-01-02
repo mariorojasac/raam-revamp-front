@@ -1,4 +1,29 @@
 import React from 'react'
+function Show(props) {
+    const id = props.match.params.id;
+    const pantries = props.pantries;
+    const pantry = pantries.find((p) => p._id === id);
+
+    const[ editForm, setEditForm ] = useState(pantry);
+
+    const handleChange = event => {
+        setEditForm(prevState => ({
+          ...prevState,
+          [event.target.name]: event.target.value
+        }));
+      }
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        const{ _id, name, image, location, description} = editForm;
+        props.updatePantries({name, image, location, description}, _id);
+        props.history.push('/pantry');
+    }
+
+    const removePantry = () => {
+        props.deletePantries(pantry._id);
+        props.history.push('/pantry');
+    }
 
 const PantryShow = () => {
     return (
