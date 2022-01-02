@@ -1,4 +1,5 @@
-import React from 'react'
+import { useState } from 'react';
+
 function Show(props) {
     const id = props.match.params.id;
     const pantries = props.pantries;
@@ -25,7 +26,6 @@ function Show(props) {
         props.history.push('/pantry');
     }
 
-const PantryShow = () => {
     return (
         <div className='pantry'>
             <h1>{pantry?.name}</h1>
@@ -68,4 +68,4 @@ const PantryShow = () => {
     )
 }
 
-export default PantryShow;
+export default Show;
