@@ -5,7 +5,7 @@ import FoodShow from './FoodShow';
 Food
 
 const Food = (props) => {
-    const [foods, setFoods] = useState(null);
+    const [foods, setFoods] = useState([]);
 
     const FOOD_BASE_URL = 'https://raam-test-api-2.herokuapp.com/food/';
 
