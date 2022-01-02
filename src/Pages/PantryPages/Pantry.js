@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import PantryIndex from './PantryIndex';
+import PantryShow from './PantryShow';
 
 import React from 'react'
 
@@ -43,7 +44,6 @@ const Pantry = (props) => {
     }
 
     useEffect(() => getPantries(), []);
-
 
     return (
         <main>

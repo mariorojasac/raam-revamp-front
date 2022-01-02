@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Show(props) {
+function PantryShow(props) {
     const id = props.match.params.id;
     const pantries = props.pantries;
     const pantry = pantries.find((p) => p._id === id);
@@ -68,4 +68,4 @@ function Show(props) {
     )
 }
 
-export default Show;
+export default PantryShow;
